@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora — premium technology and business solutions for ambitious organizations." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Nexora — Technology. Strategy. Growth.</title>
+
+  <!-- Tailwind CSS CDN: ideal for a static prototype. For production, compile Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            navy: '#07111f',
+            ink: '#0d1726',
+            slatex: '#607087',
+            cyanx: '#2dd4bf',
+            goldx: '#f5c76b'
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(45,212,191,.12), 0 24px 80px rgba(2,8,23,.16)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased dark:bg-[#050b14] dark:text-white">
+  <div id="progress" class="fixed left-0 top-0 z-[100] h-0.5 w-0 bg-teal-400"></div>
+
+  <!-- NAVBAR -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="group flex items-center gap-3" aria-label="Nexora home">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 text-sm font-extrabold text-teal-300 shadow-lg dark:bg-white dark:text-slate-950">N</span>
+        <span class="font-display text-xl font-extrabold tracking-tight">NEXORA<span class="text-teal-500">.</span></span>
+      </a>
+
+      <div id="desktopNav" class="hidden items-center gap-8 text-sm font-semibold md:flex">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg id="sunIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg id="moonIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.7 6.7 0 0 0 21 12.8Z"/></svg>
+        </button>
+        <a href="#contact" class="hidden rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-teal-500 hover:text-slate-950 sm:inline-flex dark:bg-white dark:text-slate-950">Contact Us</a>
+        <button id="menuBtn" class="icon-btn md:hidden" aria-label="Open menu" aria-expanded="false">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mx-4 hidden rounded-2xl border border-slate-200 bg-white/95 p-3 shadow-2xl backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-slate-950/95">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#capabilities" class="mobile-link">Capabilities</a>
+      <a href="#why-us" class="mobile-link">Why Us</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative isolate overflow-hidden bg-slate-50 pt-32 dark:bg-[#050b14]">
+      <div class="absolute -left-32 top-40 h-72 w-72 rounded-full bg-teal-300/20 blur-3xl"></div>
+      <div class="absolute right-0 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-24 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-32">
+        <div class="reveal">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-slate-600 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+            <span class="h-2 w-2 rounded-full bg-teal-400"></span>
+            Strategy • Technology • Growth
+          </div>
+
+          <h1 class="max-w-4xl font-display text-5xl font-extrabold leading-[.98] tracking-[-.045em] sm:text-6xl lg:text-7xl">
+            Build what’s next.
+            <span class="bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent"> Scale with confidence.</span>
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Nexora helps ambitious organizations turn complex business challenges into elegant digital products, resilient systems, and measurable growth.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" class="primary-btn">
+              Get in Touch
+              <span>→</span>
+            </a>
+            <a href="company-profile.html" download="Nexora-Company-Profile.html" class="secondary-btn">
+              Download Profile
+              <span>↓</span>
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-slate-500 dark:text-slate-400">
+            <span>✓ Enterprise-ready</span>
+            <span>✓ Outcome-focused</span>
+            <span>✓ Long-term partner</span>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="reveal relative" style="transition-delay:120ms">
+          <div class="hero-orbit absolute -inset-5 rounded-[2rem] border border-teal-400/20"></div>
+          <div class="relative rounded-[2rem] border border-slate-200 bg-white/80 p-3 shadow-glow backdrop-blur-xl dark:border-white/10 dark:bg-white/[.04]">
+            <div class="rounded-[1.5rem] bg-slate-950 p-5 text-white shadow-2xl">
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                  <p class="text-xs font-semibold text-slate-400">NEXORA / COMMAND CENTER</p>
+                  <p class="mt-1 font-display font-bold">Growth Intelligence</p>
+                </div>
+                <span class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-bold text-teal-300">LIVE</span>
+              </div>
+
+              <div class="mt-5 grid grid-cols-2 gap-3">
+                <div class="metric-card">
+                  <p class="text-xs text-slate-400">Revenue impact</p>
+                  <p class="mt-2 text-2xl font-extrabold">+38.4%</p>
+                  <div class="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10"><span class="block h-full w-[78%] rounded-full bg-teal-400"></span></div>
+                </div>
+                <div class="metric-card">
+                  <p class="text-xs text-slate-400">Automation</p>
+                  <p class="mt-2 text-2xl font-extrabold">74%</p>
+                  <div class="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10"><span class="block h-full w-[74%] rounded-full bg-blue-400"></span></div>
+                </div>
+              </div>
+
+              <div class="mt-3 rounded-2xl border border-white/10 bg-white/[.035] p-4">
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-sm font-semibold">Performance trajectory</span>
+                  <span class="text-xs text-teal-300">Last 12 months</span>
+                </div>
+                <svg viewBox="0 0 520 180" class="h-44 w-full" role="img" aria-label="Illustrative performance chart">
+                  <defs>
+                    <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#2dd4bf" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 155 C65 145 68 130 118 135 S180 92 230 108 S300 83 335 91 S405 47 450 61 S495 30 520 34 V180 H0Z" fill="url(#area)"/>
+                  <path d="M0 155 C65 145 68 130 118 135 S180 92 230 108 S300 83 335 91 S405 47 450 61 S495 30 520 34" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="mt-3 grid grid-cols-3 gap-3">
+                <div class="mini-stat"><span>Projects</span><b>120+</b></div>
+                <div class="mini-stat"><span>Markets</span><b>18</b></div>
+                <div class="mini-stat"><span>Uptime</span><b>99.9%</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card absolute -bottom-8 -left-7 hidden w-48 rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:block dark:border-white/10 dark:bg-slate-900">
+            <div class="flex items-center gap-3">
+              <div class="grid h-10 w-10 place-items-center rounded-xl bg-teal-400/15 text-teal-500">↗</div>
+              <div><p class="text-xs text-slate-500">Avg. ROI</p><p class="font-extrabold">3.8×</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="border-y border-slate-200 bg-white dark:border-white/10 dark:bg-white/[.02]">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-5 py-7 text-sm font-bold text-slate-400 lg:px-8">
+        <span>TRUSTED BY TEAMS AT</span>
+        <span class="tracking-widest">ORBIT</span>
+        <span class="tracking-widest">NORTHSTAR</span>
+        <span class="tracking-widest">VERTEX</span>
+        <span class="tracking-widest">SUMMIT</span>
+        <span class="tracking-widest">ATLAS</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="mx-auto grid max-w-7xl gap-16 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">About Nexora</p>
+          <h2 class="section-title">A sharper way to move business forward.</h2>
+        </div>
+
+        <div class="reveal">
+          <p class="text-lg leading-8 text-slate-600 dark:text-slate-300">
+            We combine strategic thinking, product design, engineering, and operational expertise to help companies make bold ideas commercially real.
+          </p>
+          <div class="mt-8 grid gap-6 sm:grid-cols-3">
+            <div><p class="text-4xl font-display font-extrabold">12+</p><p class="mt-2 text-sm text-slate-500">Years experience</p></div>
+            <div><p class="text-4xl font-display font-extrabold">180+</p><p class="mt-2 text-sm text-slate-500">Clients served</p></div>
+            <div><p class="text-4xl font-display font-extrabold">420+</p><p class="mt-2 text-sm text-slate-500">Projects shipped</p></div>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="value-card"><b>Clarity</b><span>Simple decisions from complex problems.</span></div>
+            <div class="value-card"><b>Craft</b><span>Details that make products feel premium.</span></div>
+            <div class="value-card"><b>Impact</b><span>Work measured by business outcomes.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section bg-slate-100/70 dark:bg-white/[.025]">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="eyebrow">What we do</p>
+          <h2 class="section-title">From strategy to shipped product.</h2>
+          <p class="section-copy">A multidisciplinary team that stays close to the problem, the people, and the commercial goal.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card reveal">
+            <div class="service-icon">01</div><h3>Digital Strategy</h3>
+            <p>Market intelligence, product roadmaps, transformation plans, and operating models built for execution.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+          <article class="service-card reveal" style="transition-delay:70ms">
+            <div class="service-icon">02</div><h3>Product Design</h3>
+            <p>Research-led UX, premium UI systems, prototypes, and design language that turn complexity into confidence.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+          <article class="service-card reveal" style="transition-delay:140ms">
+            <div class="service-icon">03</div><h3>Web & Software</h3>
+            <p>Fast, scalable digital platforms using modern architectures, cloud infrastructure, APIs, and automation.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">04</div><h3>Data & AI</h3>
+            <p>Decision intelligence, workflow automation, analytics, and practical AI solutions designed around real use cases.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+          <article class="service-card reveal" style="transition-delay:70ms">
+            <div class="service-icon">05</div><h3>Cloud & Security</h3>
+            <p>Reliable infrastructure, observability, security controls, and performance engineering for critical systems.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+          <article class="service-card reveal" style="transition-delay:140ms">
+            <div class="service-icon">06</div><h3>Growth Enablement</h3>
+            <p>Conversion optimization, lifecycle journeys, experimentation, and measurement frameworks that compound results.</p>
+            <a href="#contact">Explore service →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities" class="section">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">Technical capabilities</p>
+          <h2 class="section-title">Modern stack. Practical engineering.</h2>
+          <p class="section-copy">We choose technology for reliability, maintainability, speed, and the needs of your team—not hype.</p>
+        </div>
+
+        <div class="reveal space-y-5">
+          <div class="capability"><div class="flex justify-between"><b>Frontend Engineering</b><span>95%</span></div><div class="progress"><i style="width:95%"></i></div><div class="pills"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span></div></div>
+          <div class="capability"><div class="flex justify-between"><b>Backend & APIs</b><span>92%</span></div><div class="progress"><i style="width:92%"></i></div><div class="pills"><span>Node.js</span><span>Python</span><span>REST</span><span>GraphQL</span></div></div>
+          <div class="capability"><div class="flex justify-between"><b>Cloud & DevOps</b><span>90%</span></div><div class="progress"><i style="width:90%"></i></div><div class="pills"><span>AWS</span><span>Docker</span><span>CI/CD</span><span>Observability</span></div></div>
+          <div class="capability"><div class="flex justify-between"><b>Data & AI</b><span>88%</span></div><div class="progress"><i style="width:88%"></i></div><div class="pills"><span>Analytics</span><span>LLM Apps</span><span>Automation</span><span>Data Pipelines</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why-us" class="section bg-slate-950 text-white">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="eyebrow text-teal-300">Why choose us</p>
+          <h2 class="section-title">Built for teams that expect more.</h2>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="why-card reveal"><span>24/7</span><h3>Responsive support</h3><p>Reliable communication and ownership beyond launch day.</p></div>
+          <div class="why-card reveal" style="transition-delay:60ms"><span>∞</span><h3>Scalable systems</h3><p>Architectures that can grow with customers, markets, and ambition.</p></div>
+          <div class="why-card reveal" style="transition-delay:120ms"><span>01</span><h3>Senior talent</h3><p>Experienced specialists, not layers of unnecessary handoffs.</p></div>
+          <div class="why-card reveal" style="transition-delay:180ms"><span>ROI</span><h3>Proven outcomes</h3><p>Every initiative connects to a measurable business objective.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" class="section">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="profile-banner reveal">
+          <div>
+            <p class="eyebrow">Company profile</p>
+            <h2 class="mt-3 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">See our capabilities, approach, and selected work.</h2>
+            <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-300">Download the company profile for a concise overview of Nexora and how we can help your organization.</p>
+            <a href="company-profile.html" download="Nexora-Company-Profile.html" class="primary-btn mt-7">Download Company Profile <span>↓</span></a>
+          </div>
+          <div class="profile-doc">
+            <div class="text-5xl">PDF</div>
+            <span>NEXORA</span>
+            <b>Company<br/>Profile</b>
+            <small>2026 EDITION</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section bg-slate-100/70 dark:bg-white/[.025]">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">Start a conversation</p>
+          <h2 class="section-title">Have a challenge worth solving?</h2>
+          <p class="section-copy">Tell us what you’re building, improving, or trying to unlock. We’ll get back to you within one business day.</p>
+
+          <div class="mt-10 space-y-5">
+            <a class="contact-item" href="mailto:hello@nexora.example"><span>✉</span><div><small>Email</small><b>hello@nexora.example</b></div></a>
+            <a class="contact-item" href="tel:+911234567890"><span>↗</span><div><small>Phone</small><b>+91 12345 67890</b></div></a>
+            <div class="contact-item"><span>⌖</span><div><small>Office</small><b>Mumbai, India</b></div></div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="reveal rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl sm:p-8 dark:border-white/10 dark:bg-slate-900">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="field"><span>Name</span><input required name="name" placeholder="Your name" /></label>
+            <label class="field"><span>Work email</span><input required type="email" name="email" placeholder="you@company.com" /></label>
+          </div>
+          <label class="field mt-5"><span>Company</span><input name="company" placeholder="Company name" /></label>
+          <label class="field mt-5"><span>How can we help?</span><textarea required name="message" rows="6" placeholder="Tell us a little about your goals..."></textarea></label>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p id="formStatus" class="text-sm text-slate-500" aria-live="polite"></p>
+            <button class="primary-btn" type="submit">Send Inquiry <span>→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-[#050b14]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 font-extrabold text-teal-300 dark:bg-white dark:text-slate-950">N</span><b class="font-display text-xl">NEXORA.</b></div>
+        <p class="mt-5 max-w-md text-sm leading-7 text-slate-500">Technology, strategy, and design for organizations building the future.</p>
+        <div class="mt-5 flex gap-3">
+          <a class="social" href="#" aria-label="LinkedIn">in</a><a class="social" href="#" aria-label="X">𝕏</a><a class="social" href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div><h3 class="font-bold">Company</h3><div class="mt-4 grid gap-3 text-sm text-slate-500"><a href="#about">About</a><a href="#services">Services</a><a href="#why-us">Why Us</a><a href="#contact">Contact</a></div></div>
+      <div><h3 class="font-bold">Legal</h3><div class="mt-4 grid gap-3 text-sm text-slate-500"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a></div></div>
+    </div>
+    <div class="border-t border-slate-200 dark:border-white/10"><div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-slate-500 sm:flex-row sm:justify-between lg:px-8"><span>© <span id="year"></span> Nexora. All rights reserved.</span><span>Designed & engineered for growth.</span></div></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
